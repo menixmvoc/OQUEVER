@@ -37,6 +37,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'DashCtrl'
       }
     }
+  })
+  .state('tarefas', {
+    url: '/tarefas',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/tarefas.html',
+        controller: 'DashCtrl'
+      }
+    }
   });
 
   
