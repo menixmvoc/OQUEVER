@@ -28,8 +28,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'DashCtrl'
       }
     }
+  })
+   .state('cadastro', {
+    url: '/cadastro',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/cadastro.html',
+        controller: 'DashCtrl'
+      }
+    }
   });
-
 
   
   $urlRouterProvider.otherwise('/login');
