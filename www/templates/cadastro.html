@@ -3,19 +3,15 @@
             <div class="list">
                  <label class="item item-input item-stacked-label">
                     <span class="input-label">E-mail</span>
-                     <input type="text" placeholder="nome@gmail.com">
+                     <input type="text" placeholder="nome@gmail.com" ng-model="email">
                  </label>
                  <label class="item item-input item-stacked-label">
                      <span class="input-label">Senha</span>
-                      <input type="password" placeholder="Senha">
-                </label>
-                <label class="item item-input item-stacked-label">
-                     <span class="input-label">Confirmar senha</span>
-                      <input type="password" placeholder="Senha">
+                      <input type="password" placeholder="Senha" ng-model="senha">
                 </label>
                 </div>
                  <div class="padding">
-        <a class="button button-block button-positive">
+        <a class="button button-block button-positive" ng-click="novoCadastro(email, senha)">
                  Cadastrar-se
             </a>
                  </div>
