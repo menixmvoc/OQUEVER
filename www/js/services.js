@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('context', function(){
+.factory('Context', function(){
   var config = {
     apiKey: "AIzaSyDjQgRtvJNZkvhBSCveyXbmdv5n7EFY6Jg",
     authDomain: "html-mil-grau.firebaseapp.com",
@@ -15,11 +15,11 @@ angular.module('starter.services', [])
       }
   }
 })
-.factory('Login', function(context){
+.factory('Login', function(Context){
   
   return{
-    Login: function(email, senha){
-      firebase.auth().singnInWithEmailAndpassword(email, senha, callback)
+    login: function(email, senha, callback){
+      firebase.auth().signInWithEmailAndPassword(email, senha)
       .then(function(){
         callback();
 
@@ -30,8 +30,8 @@ angular.module('starter.services', [])
       });
 
     },
-     novo: function(email, senha){
-       firebase.auth().creatUserWithEmailAndpassword(email, senha, callback)
+     novo: function(email, senha, callback){
+       firebase.auth().createUserWithEmailAndPassword(email, senha)
       .then(function(){
         callback();
 
@@ -43,4 +43,13 @@ angular.module('starter.services', [])
     });
      }
   };
+})
+.factory('Tarefas', function(Context){
+  return{
+    get: function(callback){
+     firebase.database().ref('tarefas').on('value', function(snapshot){
+       callback(snapshot.val());
+     }) 
+    }
+  }
 })
