@@ -1,3 +1,4 @@
+
  angular.module('starter.controllers', [])
 
 .controller('LoginCtrl', function($scope, $state, Login) {
@@ -21,20 +22,3 @@ Login.login(email, senha, function(erro) {
     });
   }
 })
-
-.controller('TarefasCtrl', function($scope, Tarefas) {
-  $scope.tarefas = [ ];
-  Tarefas.get(function(valores){
-    $scope.tarefas = converterObjParaArray(valores);
-    $scope.$apply();
-  });
-})
-
-function converterObjParaArray (obj) {
-  var array = [];
-  for (var key in obj) {
-    obj[key].id = key;
-    array.push(obj[key]);
-  }
-  return array;
-}

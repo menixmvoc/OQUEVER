@@ -1,12 +1,12 @@
 angular.module('starter.services', [])
 
 .factory('Context', function(){
-  var config = {
-    apiKey: "AIzaSyDjQgRtvJNZkvhBSCveyXbmdv5n7EFY6Jg",
-    authDomain: "html-mil-grau.firebaseapp.com",
-    databaseURL: "https://html-mil-grau.firebaseio.com",
-    storageBucket: "html-mil-grau.appspot.com",
-    messagingSenderId: "906905468037"
+   var config = {
+    apiKey: "AIzaSyDdJfPN8bV-Ku8aBH6hRRTH8H4WPfZAr3o",
+    authDomain: "oquever-ac792.firebaseapp.com",
+    databaseURL: "https://oquever-ac792.firebaseio.com",
+    storageBucket: "oquever-ac792.appspot.com",
+    messagingSenderId: "238109741892"
   };
   firebase.initializeApp(config);
   return{
