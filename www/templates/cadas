@@ -11,7 +11,7 @@
                 </label>
                 </div>
                  <div class="padding">
-        <a class="button button-block button-positive" ng-click="novoCadastro(email, senha)">
+        <a class="button button-block button-positive" ng-click="novoCadastro(usuario, email, senha)">
                  Cadastrar-se
             </a>
                  </div>

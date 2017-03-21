@@ -2,16 +2,16 @@
         <ion-content>
       <div class="list">
                 <label class="item item-input item-stacked-label">
-                  <span class="input-label">E-mail</span>
+                  <span class="input-label email" >E-mail</span>
                   <input type="text" placeholder="nome@gmail.com" ng-model="email">
                 </label>
                 <label class="item item-input item-stacked-label">
-                  <span class="input-label">Senha</span>
+                  <span class="input-label senha">Senha</span>
                   <input type="password" placeholder="Senha" ng-model="senha">
                 </label>
       </div>
       <div  class="padding">
-                <a class="button button-block  button-assertive" ng-click="novoCadastro(usuario, email, senha)">
+                <a class="button button-block  button-assertive" ng-click="novoCadastro(email, senha)">
                   Cadastre-se
                 </a>
       </div>

@@ -2,16 +2,16 @@
     <ion-content>
         <div class="list">
                  <label class="item item-input item-stacked-label">
-                    <span class="input-label">E-mail</span>
-                     <input type="text" placeholder="Usuario ou E-mail " >
+                    <span class="input-label email">E-mail</span>
+                     <input type="text" placeholder=" E-mail " >
                  </label>
                  <label class="item item-input item-stacked-label">
-                     <span class="input-label">Senha</span>
+                     <span class="input-label senha">Senha</span>
                       <input type="password" placeholder="Senha">
                 </label>
          </div>
          <div class="padding">
-            <button class="button button-block button-assertive" >
+            <button class="button button-block button-assertive"  ng-click="fazerLogin(email, senha)" >
                 Entrar
             </button>
             <a class="button button-block button-outline button-assertive" href="#/cadastro">

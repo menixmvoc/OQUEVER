@@ -44,10 +44,10 @@ angular.module('starter.services', [])
      }
   };
 })
-.factory('Tarefas', function(Context){
+.factory('pefil', function(Context){
   return{
     get: function(callback){
-     firebase.database().ref('tarefas').on('value', function(snapshot){
+     firebase.database().ref('perfil').on('value', function(snapshot){
        callback(snapshot.val());
      }) 
     }

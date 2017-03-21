@@ -38,12 +38,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-  .state('tarefas', {
-    url: '/tarefas',
+  .state('cadastro2', {
+    url: '/cadastro2',
     views:{
       'view-inicial': {
-        templateUrl: 'templates/tarefas.html',
-         controller: 'TarefasCtrl'
+        templateUrl: 'templates/cadastro2.html'
+        
       }
     }
   });

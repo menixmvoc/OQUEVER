@@ -1,1 +1,15 @@
-/* Empty. Add your own CSS if you like */
+
+ion-content{
+	background-color:black;
+}
+
+
+.email {
+        color: white;
+}
+.senha {
+        color: white;
+}
+.generos {
+        color: white;
+}

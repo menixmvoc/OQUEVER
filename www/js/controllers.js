@@ -18,7 +18,9 @@ Login.login(email, senha, function(erro) {
 
   $scope.novoCadastro = function(email, senha) {
     Login.novo(email, senha, function(erro) {
-      alert(erro);
+      alert(erro)
+      $state.go("cadastro2"); 
+      
     });
   }
 })
