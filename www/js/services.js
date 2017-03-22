@@ -44,12 +44,23 @@ angular.module('starter.services', [])
      }
   };
 })
-.factory('pefil', function(Context){
+.factory('Perfil', function(Context){
   return{
     get: function(callback){
-     firebase.database().ref('perfil').on('value', function(snapshot){
+     firebase.database().ref('Perfil').on('value', function(snapshot){
        callback(snapshot.val());
      }) 
+    },
+    salvar: function(usuario, sexo, genero){
+      alert(usuario)
+       var cadastro2 = {
+      usuario: usuario,
+      sexo: sexo,
+      genero: genero
+       };
+       firebase.database().ref('usuarios').set(cadastro2);
+
     }
   }
-})
+});
+ 

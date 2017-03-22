@@ -23,4 +23,21 @@ Login.login(email, senha, function(erro) {
       
     });
   }
+ 
+})
+
+.controller('Cadastro2Ctrl', function($scope, $state, Perfil) {
+  $scope.usuario = '';
+  $scope.sexo = '';
+  $scope.genero = '';
+
+ $scope.salvarPerfil = function(usuario, sexo, genero) {
+   
+    Perfil.salvar(usuario, sexo, genero, function(erro) {
+      alert(erro)
+      $state.go("inicio"); 
+    });
+  }
+
+  
 })

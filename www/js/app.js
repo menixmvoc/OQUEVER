@@ -42,8 +42,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/cadastro2',
     views:{
       'view-inicial': {
-        templateUrl: 'templates/cadastro2.html'
-        
+        templateUrl: 'templates/cadastro2.html',
+         controller: 'Cadastro2Ctrl'
       }
     }
   });

@@ -11,8 +11,9 @@
      Sexo
     </div>
     <select>
+      
       <option>Masculino</option>
-      <option selected>Feminino</option>
+      <option >Feminino</option>
       <option>Outros...</option>
     </select>
   </label>
@@ -45,8 +46,6 @@
                 <ion-checkbox ng-model="filter.Musical">Musical</ion-checkbox>
                 <ion-checkbox ng-model="filter.Filmenoir">Filme noir</ion-checkbox>
                 <ion-checkbox ng-model="filter.Policial">Policial</ion-checkbox>
-                <ion-checkbox ng-model="filter.Pornochanchada">Pornochanchada</ion-checkbox>
-                <ion-checkbox ng-model="filter.Pornografico">Pornográfico</ion-checkbox>
                 <ion-checkbox ng-model="filter.Seriado">Seriado</ion-checkbox>
                 <ion-checkbox ng-model="filter.Suspense">Suspense</ion-checkbox>
                 <ion-checkbox ng-model="filter.Terror">Terror</ion-checkbox>
@@ -54,7 +53,7 @@
  </ion-list>
      </label>
       <div class="padding">
-            <button class="button button-block button-assertive">
+            <button class="button button-block button-assertive" ng-click="salvarPerfil(usuario, sexo, genero)">
                Finalizar
             </button>
       </div>
