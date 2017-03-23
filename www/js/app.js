@@ -46,6 +46,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
          controller: 'Cadastro2Ctrl'
       }
     }
+  })
+ .state('inicio', {
+    url: '/inicio',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/inicio.html',
+         controller: 'InicioCtrl'
+      }
+    }
   });
 
   

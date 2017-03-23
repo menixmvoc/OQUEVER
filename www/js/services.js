@@ -51,14 +51,7 @@ angular.module('starter.services', [])
        callback(snapshot.val());
      }) 
     },
-    salvar: function(usuario, sexo, genero){
-      alert(usuario)
-       var cadastro2 = {
-      usuario: usuario,
-      sexo: sexo,
-      genero: genero
-       };
-       firebase.database().ref('usuarios').set(cadastro2);
+    salvar: function(usuario, sexo, genero) {
 
     }
   }

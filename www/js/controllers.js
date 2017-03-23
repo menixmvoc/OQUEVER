@@ -33,11 +33,8 @@ Login.login(email, senha, function(erro) {
 
  $scope.salvarPerfil = function(usuario, sexo, genero) {
    
-    Perfil.salvar(usuario, sexo, genero, function(erro) {
-      alert(erro)
       $state.go("inicio"); 
-    });
+    
   }
-
-  
 })
+  .controller('InicioCtrl', function(){} )
