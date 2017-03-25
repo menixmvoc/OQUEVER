@@ -32,27 +32,37 @@ angular.module('starter.services', [])
     },
      novo: function(email, senha, callback){
        firebase.auth().createUserWithEmailAndPassword(email, senha)
-      .then(function(){
-        callback();
+        .then(function(){
+          callback();
 
-      })
-      .catch(function(error){
-        callback(error);
+        })
+        .catch(function(error){
+          callback(error);
 
 
-    });
+      });
      }
+     
+
+
+
+
+
   };
 })
 .factory('Perfil', function(Context){
   return{
     get: function(callback){
-     firebase.database().ref('Perfil').on('value', function(snapshot){
+     firebase.database().ref('perfil').on('value', function(snapshot){
        callback(snapshot.val());
      }) 
     },
-    salvar: function(usuario, sexo, genero) {
-
+    salvar: function(usuario, sexo, generos, email) {
+        firebase.database().ref('perfil/' + usuario).set({
+          email: email,
+          sexo: sexo,
+          generos : generos
+        });
     }
   }
 });

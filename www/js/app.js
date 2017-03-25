@@ -39,7 +39,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
   .state('cadastro2', {
-    url: '/cadastro2',
+    url: '/cadastro2/:email',
     views:{
       'view-inicial': {
         templateUrl: 'templates/cadastro2.html',
@@ -49,13 +49,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
  .state('inicio', {
     url: '/inicio',
+    abstract: true,
     views:{
       'view-inicial': {
         templateUrl: 'templates/inicio.html',
          controller: 'InicioCtrl'
       }
     }
+  })
+  .state('inicio.film', {
+    url: '/film',
+    views: {
+      'inicio-filmes': {
+        templateUrl: 'templates/film.html'
+      }
+    }
+  })
+   .state('inicio.series', {
+    url: '/series',
+    views: {
+      'inicio-series': {
+        templateUrl: 'templates/series.html'
+      }
+    }
   });
+
+
 
   
   $urlRouterProvider.otherwise('/login');

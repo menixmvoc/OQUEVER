@@ -20,3 +20,13 @@
             </div>
     </ion-content>
 </ion-view>
+<img class="full-image" src="delorean.jpg">
+
+
+
+
+ <div class="item item-body">
+    <img src="http://br.web.img1.acsta.net/r_75_106/pictures/16/06/22/00/19/008711.jpg" class="flot" >
+    <h1 class="log">
+        Logan
+    </h1>

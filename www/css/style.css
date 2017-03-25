@@ -16,3 +16,30 @@ ion-content{
 .inicio-tab {
   margin-top: 100px; 
 }
+.email {
+       text-align: center
+}
+.img {
+      background-color:black;
+
+}
+.flo{
+      float: left;  
+}
+.log {
+       text-align: center;
+       font-size: 20px;
+
+}
+.like {
+      color:red;
+
+       
+}
+.esp {
+      margin-left: 15px;   
+}
+.tamanho {
+    width: 100%;
+    
+    }
