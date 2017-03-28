@@ -72,6 +72,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: 'templates/series.html'
       }
     }
+  })
+   .state('inicio.perfil', {
+    url: '/perfil',
+    views: {
+      'inicio-perfil': {
+        templateUrl: 'templates/perfil.html'
+      }
+    }
+  })
+  .state('inicio.editarpf', {
+    url: '/editarpf',
+    views: {
+      'inicio-perfil': {
+        templateUrl: 'templates/editarpf.html'
+      }
+    }
   });
 
 
