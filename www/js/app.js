@@ -52,8 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     abstract: true,
     views:{
       'view-inicial': {
-        templateUrl: 'templates/inicio.html',
-         controller: 'InicioCtrl'
+        templateUrl: 'templates/inicio.html'
       }
     }
   })
@@ -77,18 +76,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/perfil',
     views: {
       'inicio-perfil': {
-        templateUrl: 'templates/perfil.html'
+        templateUrl: 'templates/perfil.html',
+        controller: 'PerfilCtrl'
       }
     }
   })
-  .state('inicio.editarpf', {
-    url: '/editarpf',
+ .state('inicio.batepapo',{
+    url: '/batepapo',
     views: {
       'inicio-perfil': {
-        templateUrl: 'templates/editarpf.html'
+        templateUrl: 'templates/batepapo.html'
       }
     }
-  });
+  })
+  .state('inicio.curtido',{
+    url: '/curtido',
+    views: {
+      'inicio-perfil': {
+        templateUrl: 'templates/curtido.html'
+      }
+    }
+  })
+  .state('inicio.seguidores',{
+    url: '/seguidores',
+    views: {
+      'inicio-perfil': {
+        templateUrl: 'templates/seguidores.html'
+      }
+    }
+  }); 
 
 
 

@@ -52,6 +52,9 @@ angular.module('starter.services', [])
 })
 .factory('Perfil', function(Context){
   return{
+    getUsuario: function() {
+      return firebase.auth().currentUser;
+    },
     get: function(callback){
      firebase.database().ref('perfil').on('value', function(snapshot){
        callback(snapshot.val());

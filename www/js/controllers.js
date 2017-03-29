@@ -34,11 +34,20 @@
  $scope.salvarPerfil = function(usuario, sexo, generos) {
    
       Perfil.salvar(usuario, sexo, generos, $stateParams.email)
-      //$state.go("inicio.film"); 
-    
+      //$state.go("inicio.film");  
   }
+   $scope.abrirGaleria = function(){
+      alert("abrirGaleria")
+    }
 })
-  .controller('InicioCtrl', function(){} )
+  .controller('PerfilCtrl', function($scope,$state, Perfil){
+    $scope.irCadastro = function(){
+        var email = Perfil.getUsuario().email
+       $state.go("cadastro2", {email: email});
+    }
+  } )
+
+  
 
 
  /* $scope.generosPadrao = [
