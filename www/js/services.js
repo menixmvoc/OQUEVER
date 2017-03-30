@@ -42,11 +42,6 @@ angular.module('starter.services', [])
 
       });
      }
-     
-
-
-
-
 
   };
 })
@@ -60,10 +55,9 @@ angular.module('starter.services', [])
        callback(snapshot.val());
      }) 
     },
-    salvar: function(usuario, sexo, generos, email) {
+    salvar: function(usuario, generos, email) {
         firebase.database().ref('perfil/' + usuario).set({
           email: email,
-          sexo: sexo,
           generos : generos
         });
     }

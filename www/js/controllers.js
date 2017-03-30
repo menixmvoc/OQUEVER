@@ -26,15 +26,15 @@
  
 })
 
-.controller('Cadastro2Ctrl', function($scope, $stateParams, Perfil) {
+.controller('Cadastro2Ctrl', function($scope, $state, $stateParams, Perfil) {
   $scope.usuario = '';
   $scope.sexo = '';
   $scope.generos = {};
 
- $scope.salvarPerfil = function(usuario, sexo, generos) {
+ $scope.salvarPerfil = function(usuario, generos) {
    
-      Perfil.salvar(usuario, sexo, generos, $stateParams.email)
-      //$state.go("inicio.film");  
+      Perfil.salvar(usuario, generos, $stateParams.email)
+      $state.go("inicio.film");  
   }
    $scope.abrirGaleria = function(){
       alert("abrirGaleria")

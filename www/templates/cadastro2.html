@@ -2,27 +2,11 @@
      <ion-content>
        
         <div class="list ">
-          <div class="item  item-stacked-label item-avatar">
-        <img class="" ng-click="" src="">
-     </div>
+         
         <label class="item item-input item-stacked-label">
                     <span class="input-label email">Usuario</span>
                      <input type="text" placeholder="Usuario " ng-model="usuario" >
-                      <div class="list">
-
-  <label class="item item-input item-select">
-    <div class="input-label">
-     Sexo
-    </div>
-    <select ng-model="sexo" >
-      
-      <option selected>Masculino</option>
-      <option >Feminino</option>
-      <option>Outros...</option>
-    </select>
-  </label>
-
-</div>
+                
    <span class=" input-label generos">GENEROS</span>
       <ion-list  class="padding">
           <ion-checkbox ng-model="generos.black">Ação</ion-checkbox>
@@ -48,7 +32,7 @@
  </ion-list>
      </label>
       <div class="padding">
-            <button class="button button-block button-assertive"   ng-click="salvarPerfil(usuario, sexo, generos)">
+            <button class="button button-block button-assertive"   ng-click="salvarPerfil(usuario, generos)">
                Finalizar
             </button>
       </div>

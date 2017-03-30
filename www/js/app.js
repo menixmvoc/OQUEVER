@@ -81,34 +81,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
- .state('inicio.batepapo',{
-    url: '/batepapo',
-    views: {
-      'inicio-perfil': {
-        templateUrl: 'templates/batepapo.html'
+.state('cadastroFilm', {
+    url: '/cadastroFilm',
+    views:{
+      'view-inicial': {
+        templateUrl: 'templates/cadastroFilm.html'
       }
     }
-  })
-  .state('inicio.curtido',{
-    url: '/curtido',
-    views: {
-      'inicio-perfil': {
-        templateUrl: 'templates/curtido.html'
-      }
-    }
-  })
-  .state('inicio.seguidores',{
-    url: '/seguidores',
-    views: {
-      'inicio-perfil': {
-        templateUrl: 'templates/seguidores.html'
-      }
-    }
-  }); 
+  });
 
 
 
   
   $urlRouterProvider.otherwise('/login');
 
-});
+})
+ 
