@@ -46,6 +46,18 @@
        $state.go("cadastro2", {email: email});
     }
   } )
+  .controller('CadastroFilmeCtrl', function($scope, Filme){
+    $scope.imagem ='';
+    $scope.nomeDoFilme ='';
+    $scope.genero ='';
+    $scope.descricao ='';
+    $scope.cadastrarFilme = function(imagem, nomeDoFilme, genero, descricao){
+      alert("salvou")
+      Filme.salvarFilme(imagem, nomeDoFilme, genero, descricao, function(){
+        alert("salvou")
+      })
+    }
+  })
 
   
 

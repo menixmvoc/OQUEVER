@@ -62,5 +62,24 @@ angular.module('starter.services', [])
         });
     }
   }
-});
+})
+.factory('Filme', function(Context){
+return{
+  salvarFilme: function(imagem, nomeDoFilme, descricao, genero, callback) {
+      var filmeRef = firebase.database().ref('filme').push();
+      filmeRef.set({
+        imagem: imagem,
+        nomeDoFilme: nomeDoFilme,
+        descricao: descricao,
+        genero: genero          
+      })
+      .then(function() {
+        callback();
+      });
+  }
+}
+})
+
+
+
  

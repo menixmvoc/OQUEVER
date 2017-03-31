@@ -13,7 +13,11 @@
 
 
   <label class="item item-input">
-    <input type="text"  ng-model="nome_do_filme"  placeholder="Nome do Filme">
+    <input type="text"  ng-model="nomeDoFilme"  placeholder="Nome do Filme">
+  </label>
+
+    <label class="item item-input">
+    <input type="text"  ng-model="genero"  placeholder="genero">
   </label>
 
   <label class="item item-input">
@@ -22,7 +26,7 @@
 
 
   <label class="item item-input">
-         <button class="button button-block button-assertive"  ng-click="cadastrarFilme(imagem, nome_do_filme, descricao )" >
+         <button class="button button-block button-assertive"  ng-click="cadastrarFilme(imagem, nomeDoFilme, descricao, genero)" >
                 Entrar
             </button>
   </label>

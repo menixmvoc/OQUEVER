@@ -85,8 +85,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/cadastroFilm',
     views:{
       'view-inicial': {
-        templateUrl: 'templates/cadastroFilm.html'
-      }
+        templateUrl: 'templates/cadastroFilm.html',
+        controller: 'CadastroFilmeCtrl'
+      }     
     }
   });
 
