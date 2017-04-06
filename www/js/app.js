@@ -38,6 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+
   .state('cadastro2', {
     url: '/cadastro2/:email',
     views:{
@@ -47,6 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  
  .state('inicio', {
     url: '/inicio',
     abstract: true,
@@ -60,7 +62,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/film',
     views: {
       'inicio-filmes': {
-        templateUrl: 'templates/film.html'
+        templateUrl: 'templates/film.html',
+         controller: 'FilmCtrl'
       }
     }
   })
@@ -78,6 +81,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'inicio-perfil': {
         templateUrl: 'templates/perfil.html',
         controller: 'PerfilCtrl'
+      }
+    }
+  })
+  .state('inicio.curtido', {
+    url: '/curtido',
+    views: {
+      'inicio-curtido': {
+        templateUrl: 'templates/curtido.html',
+        controller: 'curtidoCtrl'
       }
     }
   })

@@ -50,10 +50,15 @@ angular.module('starter.services', [])
     getUsuario: function() {
       return firebase.auth().currentUser;
     },
-    get: function(callback){
-     firebase.database().ref('perfil').on('value', function(snapshot){
+    getTodos: function(callback){
+      firebase.database().ref('perfil').on('value', function(snapshot){
        callback(snapshot.val());
-     }) 
+      }) 
+    },
+    get: function(usuario, callback){
+      firebase.database().ref('perfil/' + usuario).on('value', function(snapshot){
+       callback(snapshot.val());
+      }) 
     },
     salvar: function(usuario, generos, email) {
         firebase.database().ref('perfil/' + usuario).set({
@@ -65,6 +70,11 @@ angular.module('starter.services', [])
 })
 .factory('Filme', function(Context){
 return{
+  get: function(callback){
+    firebase.database().ref('filme').on('value', function(snapshot) {
+        callback(snapshot.val());
+      })  
+    },
   salvarFilme: function(imagem, nomeDoFilme, descricao, genero, callback) {
       var filmeRef = firebase.database().ref('filme').push();
       filmeRef.set({

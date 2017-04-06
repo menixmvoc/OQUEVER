@@ -1,84 +1,22 @@
 <ion-view view-title="OQUEVER">
     <ion-content class="">
+    
+
+
+
+<div class="list card img" ng-repeat="film in filmes" >
+    <div class="item item-body">
+        <img src="{{film.imagem}}" class="flot tamanho" >
+        <h1 class="log">
+            {{film.nomeDoFilme}}
+        </h1>
         
-
-
-<div class="list card img">
-  <div class="item item-body">
-
-      
-    <img src="http://nerdaos40.com.br/wp-content/uploads/2017/03/Logan_Capa.jpg" class="flot tamanho" >
-    <h1 class="log">
-        Logan
-    </h1>
-    <p> 
-Data de lançamento: 2 de março de 2017 (2h 17min)
-
-    </p>
-    <p>
-      <a href="" class="like"> Like</a>
-      
-    </p>
-  </div>
+        <p>
+            {{film.descricao}} 
+        </p>
+       
+    </div>
 </div> 
-
-<div class="list card img" >
-<div class="item item-body">
-    <img src="https://observatoriodocinema.bol.uol.com.br/wp-content/uploads/2016/06/esquadraosuicida.jpg" class="flot tamanho" >
-    <h1 class="log">
-        Esquadrão Suicida
-    </h1>
-    <p> 
-Data de lançamento: 2 de março de 2017 (2h 17min)
-
-    </p>
-    <p>
-      <a href="" class="like"> Like</a>
-      <a href="" class="like esp"> Comments</a>
-    </p>
-  </div>
-</div> 
-
-
-
-<div class="list card img" >
-<div class="item item-body">
-    <img src="https://confiramais.com.br/wp-content/uploads/2016/05/Xmen-apocalypse-filme-critca-2016.jpg" class="flot tamanho" >
-    <h1 class="log">
-       x-man apocalipse
-    </h1>
-    <p> 
-Data de lançamento 19 de maio de 2016 (2h 24min
-
-    </p>
-    <p>
-      <a href="" class="like"> Like</a>
-      <a href="" class="like esp"> Comments</a>
-    </p>
-  </div>
-</div> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </ion-content>
 </ion-view>

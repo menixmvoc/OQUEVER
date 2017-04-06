@@ -44,6 +44,7 @@
     $scope.irCadastro = function(){
         var email = Perfil.getUsuario().email
        $state.go("cadastro2", {email: email});
+       
     }
   } )
   .controller('CadastroFilmeCtrl', function($scope, Filme){
@@ -58,8 +59,22 @@
       })
     }
   })
+  .controller('FilmCtrl', function($scope, Filme){
+    $scope.filmes = [];
 
-  
+    Filme.get(function(filmes){
+      $scope.filmes = converterObjParaArray(filmes);
+    })
+  })
+
+function converterObjParaArray (obj) {
+  var array = [];
+  for (var key in obj) {
+    obj[key].id = key;
+    array.push(obj[key]);
+  }
+  return array;
+}
 
 
  /* $scope.generosPadrao = [
